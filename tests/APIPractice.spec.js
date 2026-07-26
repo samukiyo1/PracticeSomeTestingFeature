@@ -16,6 +16,7 @@ test.describe('API Practice',()=>{
         })
         expect(response.status()).toBe(201);
         expect(response.ok()).toBeTruthy();
+        console.log(await response.json())
     });
     test('Put Request',async({request})=>{
         const response=await request.put(`${BaseURL}/users/1`,{
